@@ -2,8 +2,8 @@
 This repository contains the source code for a car rental website. The website provides a platform for users to browse and rent cars for various purposes, offering a convenient and reliable service for both individuals and businesses.
 
 ## Technologies Used
-- ${bold}Frontend${normal}: HTML, CSS, Bootstrap
-- ${bold}Other Tools${normal}: Git, GitHub, VS Code
+- Frontend: HTML, CSS, Bootstrap
+- Other Tools: Git, GitHub, VS Code
 
 ## Usage
 - Visit the website in your web browser.
