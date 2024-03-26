@@ -3,6 +3,8 @@ This repository contains the source code for a car rental website. The website p
 
 ## Technologies Used
 - Frontend: HTML, CSS, Bootstrap
+- Backend: Python Flask
+- Database: MySQL
 - Other Tools: Git, GitHub, VS Code
 
 ## Usage
@@ -21,6 +23,9 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 - Make your changes and commit them: git commit -m 'Add new feature'
 - Push to the branch: git push origin feature-name
 - Submit a pull request with a detailed description of your changes.
+
+## Contacts
+* For any inquiries or feedback, please contact the [project author](https://github.com/Omewah)
 
 ## Author
 * [Joel Omewah](https://github.com/Omewah)
