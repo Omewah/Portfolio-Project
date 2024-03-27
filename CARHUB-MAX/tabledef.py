@@ -23,5 +23,23 @@ class User(Base):
         self.password = password
 
 
+class CarBooking(Base):
+    __tablename__ = 'car_bookings'
+    
+    id = Column(Integer, primary_key=True)
+    first_name = Column(String)
+    last_name = Column(String)
+    email = Column(String)
+    mobile_number = Column(String)
+    pickup_location = Column(String)
+    drop_location = Column(String)
+    pickup_date = Column(String)
+    pickup_time = Column(String)
+    adult = Column(String)
+    child = Column(String)
+    special_request = Column(String)
+    payment = Column(String)
+    
+
 # This should create a table
 Base.metadata.create_all(engine)
