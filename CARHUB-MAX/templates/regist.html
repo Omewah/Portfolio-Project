@@ -102,6 +102,20 @@
         </div>
     </div>
     <!-- Navbar End -->
+
+    <!-- Flash Messages Start -->
+    <div id="flashMessage" style="display: none;">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+    <!-- Flash Messages End -->
     
     <!-- Form Start -->
     <div class="container">
@@ -116,7 +130,7 @@
             <label for="confirm_password">Confirm Password:</label>
             <input type="password" id="confirm_password" name="confirm_password" required>
 
-            <button type="submit" style="background-color: #D98500;">Register</button>
+            <button id="registerButton" type="submit" style="background-color: #D98500;">Register</button>
         </form>
     </div>
     <!-- Form End -->
@@ -127,5 +141,8 @@
         <p class="m-0 text-center text-body">Designed by <a href="https://github.com/Omewah" target="_blank">Joel</a></p>
     </div>
     <!-- Footer End -->
+
+    <!-- Link to the JavaScript file -->
+    <script src="{{ url_for('static', filename='flash.js') }}"></script>
 </body>
 </html>
