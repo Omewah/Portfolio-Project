@@ -2,16 +2,16 @@
 This repository contains the source code for a car rental website. The website provides a platform for users to browse and rent cars for various purposes, offering a convenient and reliable service for both individuals and businesses.
 
 ## Technologies Used
-- Frontend: HTML, CSS, Bootstrap
-- Backend: Python Flask
-- Database: MySQL
-- Other Tools: Git, GitHub, VS Code
+- **Frontend**: HTML, CSS, Bootstrap
+- **Backend**: Python Flask API, JavaScript
+- **Database**: MySQL
+- **Other Tools**: Git, GitHub, VS Code
 
 ## Installation
-- Clone the repository: git clone https://github.com/Omewah/Portfolio-Project.git
-- Navigate to the project directory: cd CARHUB-MAX
-- Create a database with tables: python3 tabledef.py
-- Start the server: python3 app.py
+- **Clone the repository**: git clone https://github.com/Omewah/Portfolio-Project.git
+- **Navigate to the project directory**: cd CARHUB-MAX
+- **Create a database with tables**: python3 tabledef.py
+- **Start the server**: python3 app.py
 
 ## Usage
 - Visit the website in your web browser.
