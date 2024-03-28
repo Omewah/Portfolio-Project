@@ -39,21 +39,6 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/booking_2')
-def booking_2():
-    return render_template('booking_2.html')
-
-
-@app.route('/booking_3')
-def booking_3():
-    return render_template('booking_3.html')
-
-
-@app.route('/booking_6')
-def booking_6():
-    return render_template('booking_6.html')
-
-
 @app.route('/regist', methods=['GET', 'POST'])
 def regist():
     if request.method == 'POST':
@@ -141,6 +126,48 @@ def booking_1():
         return redirect(url_for('confirmation'))
     
     return render_template('booking_1.html')
+
+
+@app.route('/booking_2', methods=['GET', 'POST'])
+def booking_2():
+    if request.method == 'POST':
+        first_name = request.form['first_name']
+        last_name = request.form['last_name']
+        email = request.form['email']
+        mobile_number = request.form['mobile_number']
+        pickup_location = request.form['pickup_location']
+        drop_location = request.form['drop_location']
+        pickup_date = request.form['pickup_date']
+        pickup_time = request.form['pickup_time']
+        adult = request.form['adult']
+        child = request.form['child']
+        special_request = request.form['special_request']
+        payment = request.form['payment']
+
+        session = Session()
+        new_booking = CarBooking(
+            first_name=first_name,
+            last_name=last_name,
+            email=email,
+            mobile_number=mobile_number,
+            pickup_location=pickup_location,
+            drop_location=drop_location,
+            pickup_date=pickup_date,
+            pickup_time=pickup_time,
+            adult=adult,
+            child=child,
+            special_request=special_request,
+            payment=payment
+        )
+            
+        session.add(new_booking)
+        session.commit()
+        session.close()
+
+        flash('Successful! Thank you for choosing CARHUB-MAX.', 'success')
+        return redirect(url_for('confirmation'))
+    
+    return render_template('booking_2.html')
 
 
 @app.route('/confirmation')
